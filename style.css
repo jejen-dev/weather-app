@@ -544,7 +544,7 @@ h3 {
         flex-direction: row;
         justify-content: space-between;
         flex: 3;
-        gap: 12px;
+        gap: 6px;
     }
 
     .city-name-sm {
@@ -585,7 +585,7 @@ h3 {
 }
 
 /* Mobile Kecil (max-width: 480px) */
-@media (max-width: 480px) {
+@media (max-width:) {
     body {
         padding: 16px;
     }
