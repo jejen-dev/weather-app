@@ -105,17 +105,19 @@ const WeatherApp = () => {
         const results = [];
         for (const city of cities) {
             try {
-                const geo = await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`);
-                if (geo.data.length) {
-                    const { lat, lon, name, country } = geo.data[0];
-                    const weather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`);
+                const geoRes = await axios.get(`/api/geo?q=${city}`);
+                if (geoRes.data.length) {
+                    const { lat, lon, name, country } = geoRes.data[0];
+                    const weatherRes = await axios.get(`/api/weather?lat=${lat}&lon=${lon}`);
                     results.push({
                         name, country,
-                        temp: weather.data.main.temp,
-                        weather: weather.data.weather[0]
+                        temp: weatherRes.data.main.temp,
+                        weather: weatherRes.data.weather[0]
                     });
                 }
-            } catch (e) { console.error(city, e); }
+            } catch (e) {
+                console.error(city, e);
+            }
         }
         setLargeCities(results);
     };
