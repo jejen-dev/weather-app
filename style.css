@@ -460,7 +460,6 @@ h3 {
         gap: 32px;
     }
 
-    /* Baris atas: search dan toggle jadi vertikal */
     .top-row {
         flex-direction: column;
         align-items: stretch;
@@ -480,7 +479,6 @@ h3 {
         gap: 32px;
     }
 
-    /* Current weather: dua kolom jadi satu */
     .current-weather {
         grid-template-columns: 1fr;
         gap: 16px;
@@ -511,7 +509,6 @@ h3 {
         font-size: 24px;
     }
 
-    /* Hourly forecast: scroll tetap, item sedikit lebih kecil */
     .hourly-container {
         gap: 10px;
     }
@@ -529,7 +526,6 @@ h3 {
         font-size: 11px;
     }
 
-    /* Large cities: item fleksibel */
     .city-item {
         padding: 16px;
         flex-wrap: wrap;
@@ -555,7 +551,6 @@ h3 {
         font-size: 22px;
     }
 
-    /* 5-day forecast: setiap day item bisa wrap */
     .forecast-day-item {
         flex-wrap: wrap;
         gap: 10px;
@@ -581,6 +576,107 @@ h3 {
     .temp-min,
     .temp-max {
         min-width: 35px;
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+        body {
+            padding: 16px;
+        }
+
+        .weather-app {
+            gap: 24px;
+        }
+
+        .top-row {
+            gap: 12px;
+        }
+
+        .search-container input,
+        .search-container button {
+            padding: 12px 14px;
+            font-size: 14px;
+        }
+
+        .unit-toggle {
+            align-self: stretch;
+            display: flex;
+            justify-content: center;
+        }
+
+        .unit-toggle button {
+            padding: 10px 20px;
+            font-size: 16px;
+            min-width: 70px;
+        }
+
+        .temp-big {
+            font-size: 44px;
+        }
+
+        .city-name {
+            font-size: 20px;
+        }
+
+        .detail-item {
+            font-size: 13px;
+            gap: 6px;
+        }
+
+        .hourly-item {
+            min-width: 60px;
+            padding: 12px 4px;
+        }
+
+        .hourly-temp {
+            font-size: 18px;
+        }
+
+        .city-item {
+            padding: 14px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .city-left-details {
+            width: 100%;
+        }
+
+        .city-right-details {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 6px;
+        }
+
+        .city-name-sm {
+            font-size: 18px;
+        }
+
+        .city-temp-lg {
+            font-size: 20px;
+        }
+
+        .forecast-day-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 14px;
+        }
+
+        .forecast-day-name {
+            width: auto;
+            font-size: 15px;
+        }
+
+        .forecast-weather-info {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .temp-range-slider {
+            width: 100%;
+        }
     }
 }
 
