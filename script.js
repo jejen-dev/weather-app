@@ -104,7 +104,7 @@ const WeatherApp = () => {
 
     const fetchLargeCities = React.useCallback(async () => {
         setLargeCitiesLoading(true);
-        const cityList = ['Jakarta', 'London', 'Tokyo'];
+        const cityList = ['New York', 'London', 'Tokyo'];
         const results = [];
 
         const promises = cityList.map(async (city) => {
