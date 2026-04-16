@@ -581,7 +581,7 @@ h3 {
 
 @media (max-width: 480px) {
     body {
-        padding: 20px;
+        padding: 30px;
     }
 
     .weather-app {
@@ -668,8 +668,8 @@ h3 {
     .city-right-details {
         flex-direction: row;
         justify-content: space-between;
-        flex: 3;
-        gap: 6px;
+        flex: 1;
+        gap: 0;
     }
 
     .city-name-sm {
