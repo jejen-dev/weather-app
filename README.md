@@ -36,3 +36,20 @@ Proyek ini merupakan solusi dari tantangan [Weather App Challenge](https://devch
 - **Deployment**: Vercel
 
 ## 📁 Struktur Proyek
+
+weather-app/
+├── api/
+│ ├── geo.js # Geocoding endpoint
+│ ├── weather.js # Current weather endpoint
+│ └── forecast.js # 5-day forecast endpoint
+├── resources/
+│ ├── earth.png
+│ ├── Search.svg
+│ ├── wind.png
+│ └── *.png # Ikon cuaca (01d.png, 02d.png, ...)
+├── index.html
+├── style.css
+├── script.js
+├── package.json # (opsional) dengan {"type": "module"}
+└── README.md
+
