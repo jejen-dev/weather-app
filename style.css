@@ -540,7 +540,7 @@ h3 {
         flex-direction: row;
         justify-content: space-between;
         flex: 3;
-        gap: 6px;
+        gap: 4px;
     }
 
     .city-name-sm {
@@ -577,106 +577,134 @@ h3 {
     .temp-max {
         min-width: 35px;
     }
+}
 
-    /* Mobile */
-    @media (max-width: 480px) {
-        body {
-            padding: 16px;
-        }
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
 
-        .weather-app {
-            gap: 24px;
-        }
+    .weather-app {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
 
-        .top-row {
-            gap: 12px;
-        }
+    .top-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
 
-        .search-container input,
-        .search-container button {
-            padding: 12px 14px;
-            font-size: 14px;
-        }
+    .search-container {
+        max-width: 100%;
+    }
 
-        .unit-toggle {
-            align-self: stretch;
-            display: flex;
-            justify-content: center;
-        }
+    .unit-toggle {
+        align-self: flex-start;
+    }
 
-        .unit-toggle button {
-            padding: 10px 20px;
-            font-size: 16px;
-            min-width: 70px;
-        }
+    .left-column,
+    .right-column {
+        gap: 32px;
+    }
 
-        .temp-big {
-            font-size: 44px;
-        }
+    .current-weather {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
 
-        .city-name {
-            font-size: 20px;
-        }
+    .current-right {
+        text-align: left;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        .detail-item {
-            font-size: 13px;
-            gap: 6px;
-        }
+    .detail-item {
+        margin-top: 0;
+        justify-content: flex-start;
+    }
 
-        .hourly-item {
-            min-width: 60px;
-            padding: 12px 4px;
-        }
+    .temp-range {
+        margin-top: 12px;
+    }
 
-        .hourly-temp {
-            font-size: 18px;
-        }
+    .temp-big {
+        font-size: 56px;
+    }
 
-        .city-item {
-            padding: 14px;
-            flex-direction: column;
-            align-items: flex-start;
-        }
+    .city-name {
+        font-size: 24px;
+    }
 
-        .city-left-details {
-            width: 100%;
-        }
+    .hourly-container {
+        gap: 10px;
+    }
 
-        .city-right-details {
-            width: 100%;
-            flex-direction: row;
-            justify-content: space-between;
-            gap: 6px;
-        }
+    .hourly-item {
+        min-width: 70px;
+        padding: 16px 6px;
+    }
 
-        .city-name-sm {
-            font-size: 18px;
-        }
+    .hourly-temp {
+        font-size: 20px;
+    }
 
-        .city-temp-lg {
-            font-size: 20px;
-        }
+    .hourly-status {
+        font-size: 11px;
+    }
 
-        .forecast-day-item {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
-            padding: 14px;
-        }
+    .city-item {
+        padding: 16px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
 
-        .forecast-day-name {
-            width: auto;
-            font-size: 15px;
-        }
+    .city-left-details {
+        flex: 2;
+    }
 
-        .forecast-weather-info {
-            width: 100%;
-            justify-content: space-between;
-        }
+    .city-right-details {
+        flex-direction: row;
+        justify-content: space-between;
+        flex: 3;
+        gap: 6px;
+    }
 
-        .temp-range-slider {
-            width: 100%;
-        }
+    .city-name-sm {
+        font-size: 20px;
+    }
+
+    .city-temp-lg {
+        font-size: 22px;
+    }
+
+    .forecast-day-item {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .forecast-day-name {
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .forecast-weather-info {
+        flex: 1;
+        min-width: 100px;
+    }
+
+    .temp-range-slider {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .temp-min,
+    .temp-max {
+        min-width: 35px;
     }
 }
 
