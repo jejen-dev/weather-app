@@ -399,7 +399,7 @@ h3 {
 }
 
 /* ============================================
-   RESPONSIVE DESIGN - TABLET & MOBILE (REVISED)
+   RESPONSIVE DESIGN - TABLET & MOBILE
    ============================================ */
 
 /* Tablet (max-width: 1024px) */
@@ -493,13 +493,12 @@ h3 {
     }
 
     .detail-item {
-        justify-content: flex-start;
         margin-top: 0;
+        justify-content: flex-start;
     }
 
     .temp-range {
         margin-top: 12px;
-        text-align: left;
     }
 
     .temp-big {
@@ -580,34 +579,17 @@ h3 {
     }
 }
 
-/* Mobile (max-width: 480px) */
 @media (max-width: 480px) {
     body {
         padding: 20px;
     }
 
     .weather-app {
-        grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 24px;
     }
 
     .top-row {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 16px;
-    }
-
-    .search-container {
-        max-width: 100%;
-    }
-
-    .unit-toggle {
-        align-self: flex-start;
-    }
-
-    .left-column,
-    .right-column {
-        gap: 28px;
+        gap: 12px;
     }
 
     .current-weather {
@@ -634,11 +616,11 @@ h3 {
     }
 
     .temp-big {
-        font-size: 52px;
+        font-size: 48px;
     }
 
     .city-name {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .hourly-container {
@@ -664,9 +646,9 @@ h3 {
     }
 
     .city-item {
-        padding: 16px;
         flex-direction: column;
         align-items: stretch;
+        padding: 16px;
         gap: 12px;
     }
 
@@ -679,7 +661,6 @@ h3 {
     .city-right-details {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
     }
 
     .city-name-sm {
@@ -690,29 +671,18 @@ h3 {
         font-size: 20px;
     }
 
-    .city-icon-sm {
-        width: 32px;
-        height: 32px;
-    }
-
     .forecast-day-item {
         flex-direction: column;
         align-items: stretch;
-        gap: 10px;
+        gap: 8px;
     }
 
     .forecast-day-name {
-        width: 100%;
-        font-size: 16px;
-    }
-
-    .forecast-weather-info {
-        justify-content: space-between;
+        width: auto;
     }
 
     .temp-range-slider {
         width: 100%;
-        margin-top: 8px;
     }
 
     .temp-min,
@@ -722,11 +692,12 @@ h3 {
     }
 
     .card {
-        padding: 18px;
+        padding: 16px;
     }
 
     h3 {
         font-size: 20px;
+        margin-bottom: 16px;
     }
 }
 
