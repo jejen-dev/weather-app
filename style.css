@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #030616;
+    background-image: url('resources/earth.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 28px 72px 72px 72px;
+    color: #F2F5F9;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Container utama - grid 2 kolom */
+.weather-app {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: start;
+}
+
+/* Baris pertama: search (kiri) dan unit toggle (kanan) */
+.top-row {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-container {
+    background: #20293A;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    flex: 1;
+    max-width: 280px;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #F2F5F9;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    order: 2;
+    padding-left: 16px;
+}
+
+.search-input::placeholder {
+    color: #B0B8C5;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    order: 1;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.unit-toggle {
+    display: flex;
+    gap: 2px;
+    background: #20293A;
+    padding: 4px 4px;
+    border-radius: 40px;
+}
+
+.unit-btn {
+    background: #20293A;
+    border: none;
+    padding: 12px 12px;
+    border-radius: 40px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #F2F5F9;
+}
+
+.unit-btn.active {
+    background: #F2F5F9;
+    color: #20293A;
+}
+
+/* Kolom kiri */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.left-column .card:last-child {
+    background: transparent;
+    padding: 0;
+}
+
+/* Kolom kanan */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.right-column .card:first-child {
+    background: transparent;
+    padding: 0;
+}
+
+.right-column .card:last-child {
+    background: transparent;
+    padding: 0;
+}
+
+/* Card umum */
+.card {
+    background: #20293A;
+    border-radius: 24px;
+    padding: 24px;
+}
+
+/* Current weather */
+.current-weather {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 24px;
+    align-items: start;
+}
+
+.current-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.current-right {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.temp-big {
+    font-size: 70px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.city-name {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.local-time {
+    font-size: 14px;
+    color: #B0B8C5;
+    margin-top: 6px;
+}
+
+.weather-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.weather-icon-large {
+    width: 40px;
+    height: 40px;
+}
+
+.weather-status {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    font-size: 16px;
+    margin-top: 33px;
+}
+
+.detail-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.feels-like {
+    font-size: 10px;
+    margin-top: 8px;
+}
+
+.temp-range {
+    font-size: 10px;
+    color: #B0B8C5;
+    margin-top: 18px;
+}
+
+/* Hourly forecast */
+.hourly-container {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+}
+
+.hourly-item {
+    min-width: 80px;
+    background: #20293A;
+    border-radius: 24px;
+    padding: 27px 8px;
+    text-align: center;
+}
+
+.hourly-time {
+    font-size: 14px;
+    color: #F2F5F9;
+    margin-bottom: 6px;
+}
+
+.hourly-divider {
+    border: none;
+    border-top: 1px solid #030616;
+    margin-bottom: 6px;
+    width: 100%;
+}
+
+.hourly-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 6px;
+}
+
+.hourly-status {
+    font-size: 12px;
+    color: #B0B8C5;
+    margin-bottom: 6px;
+}
+
+.hourly-temp {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* Large cities - list vertikal */
+.city-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: transparent;
+}
+
+.city-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: #20293A;
+    padding: 24px;
+    border-radius: 24px;
+}
+
+.city-left-details {
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.city-right-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.city-icon-sm {
+    width: 40px;
+    height: 40px;
+}
+
+.city-name-sm {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.city-country {
+    font-size: 14px;
+    color: #B0B8C5;
+}
+
+.city-temp-lg {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.city-status {
+    font-size: 14px;
+    color: #B0B8C5;
+}
+
+/* 5-day forecast - list vertikal */
+.forecast-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.forecast-day-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #20293A;
+    padding: 14px;
+    border-radius: 14px;
+}
+
+.forecast-day-name {
+    width: 120px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.forecast-weather-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    font-size: 12px;
+}
+
+.forecast-icon-sm {
+    width: 40px;
+    height: 40px;
+}
+
+.forecast-temp-val {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Slider range suhu di 5-day forecast */
+.temp-range-slider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.range-track {
+    position: relative;
+    flex: 1;
+    height: 4px;
+    background-color: #030616;
+    border-radius: 4px;
+}
+
+.range-fill {
+    position: absolute;
+    height: 100%;
+    background-color: #4E80EE;
+    border-radius: 4px;
+    left: 0;
+    width: 0%;
+}
+
+.temp-min,
+.temp-max {
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 40px;
+}
+
+.temp-min {
+    text-align: left;
+}
+
+.temp-max {
+    text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    body {
+        padding: 20px 20px 60px 20px;
+    }
+
+    .weather-app {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .top-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-container {
+        max-width: none;
+    }
+
+    .unit-toggle {
+        align-self: flex-end;
+    }
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: 40px;
+    background: #20293A;
+    border-radius: 24px;
+}
