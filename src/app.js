@@ -154,7 +154,7 @@ const WeatherApp = () => {
             <div className="top-row">
                 <div className="search-container">
                     <input type="text" className="search-input" placeholder="Search city..." value={search} onChange={e => setSearch(e.target.value)} onKeyPress={e => e.key === 'Enter' && handleSearch()} />
-                    <button className="search-btn" onClick={handleSearch}><img src="public/assets/Search.svg" className="search-icon" alt="search" /></button>
+                    <button className="search-btn" onClick={handleSearch}><img src="/assets/Search.svg" className="search-icon" alt="search" /></button>
                 </div>
                 <div className="unit-toggle">
                     <button className={`unit-btn ${unit === 'C' ? 'active' : ''}`} onClick={() => setUnit('C')}>°C</button>
@@ -178,7 +178,7 @@ const WeatherApp = () => {
                                 <div className="city-name">{current.name}, {current.country}</div>
                                 <div className="local-time">{formatLocalTime(current.dt, timezoneOffset)}</div>
                                 <div className="detail-item">
-                                    <img src="public/assets/wind.png" className="detail-icon" alt="wind" />
+                                    <img src="/assets/wind.png" className="detail-icon" alt="wind" />
                                     <span>{current.wind} m/s</span>
                                 </div>
                                 <div className="temp-range">↑{formatTemp(current.temp_max)}°{unit} ↓{formatTemp(current.temp_min)}°{unit}</div>
