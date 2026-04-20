@@ -7,7 +7,7 @@
 body {
     font-family: 'Outfit', sans-serif;
     background-color: #030616;
-    background-image: url('resources/earth.png');
+    background-image: url('assets/earth.png');
     background-size: cover;
     background-position: center;
     min-height: 100vh;

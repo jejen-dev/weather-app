@@ -10,7 +10,7 @@ const iconMap = {
     '50d': '50d.png', '50n': '50d.png'
 };
 
-const getIconUrl = (iconCode) => `resources/${iconMap[iconCode] || '01d.png'}`;
+const getIconUrl = (iconCode) => `/assets/${iconMap[iconCode] || '01d.png'}`;
 const toFahrenheit = (c) => (c * 9 / 5) + 32;
 
 const formatLocalTime = (timestamp, timezoneOffsetSec) => {
