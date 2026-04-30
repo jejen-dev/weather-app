@@ -2,7 +2,7 @@
 
 Aplikasi cuaca real-time yang memberikan informasi akurat dan mudah dipahami. Dibangun dengan **React**, **OpenWeatherMap API**, dan **Vercel Serverless Functions**. Menampilkan cuaca terkini, prakiraan per jam (24 jam), prakiraan 5 hari, serta dukungan pencarian kota dan toggle satuan (°C/°F).
 
-> 🔗 **Demo Langsung:** [weather-app-ten-blond-23.vercel.app](https://weather-app-ten-blond-23.vercel.app)
+> 🔗 **Demo Langsung:** [weather-app](https://weather-g9xqsp70k-jejenprofile-2104s-projects.vercel.app/)
 
 > 📌 **Challenge:** [devChallenges.io – Weather App](https://devchallenges.io/challenge/weather-app)
 
